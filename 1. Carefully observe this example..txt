@@ -1,0 +1,30 @@
+1. Carefully observe this example.
+a) Is the InnerFunction() a closure?
+b) What is output of this program
+
+function OuterFunction()
+{ var outerVariable = 100;
+function InnerFunction() {
+alert(outerVariable);
+}
+return InnerFunction;
+}
+var innerFunc = OuterFunction();
+innerFunc();
+
+
+
+
+ANS:a) Yes, `InnerFunction()` is a closure. A closure is a function that has access to variables from its outer (enclosing) scope, even after the outer function has finished executing. 
+
+b) The output of this program would be an alert box displaying the value `100`.
+
+Here's the explanation of the program execution:
+
+1. `OuterFunction()` is defined, and the `outerVariable` is assigned the value `100`.
+2. `InnerFunction()` is defined inside `OuterFunction()` and has access to the `outerVariable`.
+3. `OuterFunction()` returns the `InnerFunction`.
+4. The return value of `OuterFunction()` (which is `InnerFunction`) is stored in the variable `innerFunc`.
+5. Now, when you call `innerFunc()` with `innerFunc()`, it executes the `InnerFunction()`, which alerts the value of `outerVariable`, which is `100`.
+
+So, when you execute `innerFunc()`, it displays an alert with the value `100`.

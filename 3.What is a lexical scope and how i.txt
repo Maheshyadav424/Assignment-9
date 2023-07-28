@@ -1,0 +1,23 @@
+3.What is a lexical scope and how is it related to closure?
+
+ANS:
+
+Lexical scope, also known as static scope, is a concept in programming languages, including JavaScript, where the scope of a variable is determined by its location in the source code during the compilation phase, rather than the runtime phase. In other words, lexical scope is based on how the code is written (the structure and nesting of functions) and not on how the code is executed.
+
+EX:
+function outerFunction() {
+  var outerVariable = 100;
+
+  function innerFunction() {
+    console.log(outerVariable); // Closure: innerFunction has access to outerVariable
+  }
+
+  return innerFunction;
+}
+
+var innerFunc = outerFunction();
+innerFunc(); 
+
+
+
+// Outputs 100, due to the closure retaining access to outerVariable

@@ -1,0 +1,22 @@
+4.Output of following closure ?
+for (var i = 0; i < 3; i++) {
+setTimeout(function log() {
+console.log(i); // What is logged?
+}, 1000);
+}
+
+ANS:
+
+for (var i = 0; i < 3; i++) {
+  (function (currentValue) {
+    setTimeout(function log() {
+      console.log(currentValue);
+    }, 1000);
+  })(i);
+}
+
+
+OUPUT:
+0
+1
+2

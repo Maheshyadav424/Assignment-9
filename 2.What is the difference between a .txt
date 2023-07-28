@@ -1,0 +1,4 @@
+2.What is the difference between a closure and a scope ?
+
+ANS:
+scope determines the accessibility of variables within a specific region of code, while a closure is a function that captures and maintains access to variables from its outer scope, even after that scope's execution has finished. Closures are a powerful concept in JavaScript and are frequently used to create private variables and maintain state in certain scenarios.
